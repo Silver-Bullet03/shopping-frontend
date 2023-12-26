@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class = "container m-auto mt-4">
+  <div class = "d-flex justify-content-evenly flex-wrap">
+    <div *ngFor = "let product of products" class = "m-2" >
+        <div class="card" style = "width : 400px">
+            <div class="card-body" >
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text">{{product.description}}</p>
+              <div class = "d-flex justify-content-between">
+                <div class = "">${{product.price}}</div>
+                <button type="button" class="btn btn-primary">Buy</button>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+

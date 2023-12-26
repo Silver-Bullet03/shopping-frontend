@@ -1,0 +1,23 @@
+<div class = "container border p-4 mt-5 col-md-3">
+  <form (ngSubmit) = "onSubmit()" class = "p-2">
+
+    <div class="mb-3">
+        <label for="userNameInput" class="form-label">User Name</label>
+        <input type="text" class="form-control" id="userNameInput" [(ngModel)] = "givenUserName" name = "userName">
+    </div>
+
+    <div class="mb-3">
+      <label for="passwordInput" class="form-label">Password</label>
+      <input type="password" class="form-control" id="passwordInput" [(ngModel)] = "givenPassword" name = "password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+  <div class ="text mt-2">
+    Don't have an account?? then <a href = '/signUp' style = "text-decoration: none;">Sign Up</a>
+  </div>
+</div>
+
+
+

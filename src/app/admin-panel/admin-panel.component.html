@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<ng-container *ngIf="isAdmin; else notAdmin">
+  <div class = "d-flex justify-content-between m-3">
+    <h4 class = "ms-4">Products List</h4>
+    <button class = "btn btn-dark" [routerLink]="['/addProduct']" >Add Product</button>
+</div>
+<div class = "container m-auto">
+    <div class = "d-flex justify-content-around flex-wrap">
+      <div *ngFor = "let product of products" class = "m-2" >
+          <div class="card" style = "width : 400px">
+              <div class="card-body" >
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">{{product.description}}</p>
+                <div class = "d-flex justify-content-between">
+                  <div class = "">${{product.price}}</div>
+                  <button type="button" class="btn btn-primary" (click) = "viewProduct(product.id)">View</button>
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</ng-container>
+<ng-template #notAdmin>
+  <!-- Content to display when condition is false -->
+  <div class = "container d-flex justify-content-center">
+    <h1>Forbidden for Users!!</h1>
+  </div>
+</ng-template>
+
+
+

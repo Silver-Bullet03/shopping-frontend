@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class = "container m-auto" style = "width : 400px">
+    <form (ngSubmit) = "onSubmit()">
+  
+      <div class="mb-3">
+          <label for="nameInput" class="form-label">Name</label>
+          <input type="text" class="form-control" id="nameInput" [(ngModel)] = "product.name" name = "name">
+      </div>
+  
+      <div class="mb-3">
+        <label for="descriptionInput" class="form-label">Description</label>
+        <input type="text" class="form-control" id="descriptionInput" [(ngModel)] = "product.description" name = "description">
+      </div>
+  
+      <div class="mb-3">
+        <label for="priceInput" class="form-label">Price</label>
+        <input type="number" class="form-control" id="priceInput" [(ngModel)] = "product.price" name = "price">
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+  </div>
+
